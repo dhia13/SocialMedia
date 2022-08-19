@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const UsersCtrl = require('../controllers/UsersController')
-const { protect, Admin } = require('../Utils/Authentication')
+const { protect, Admin } = require('../utils/Authentication')
 //update own data
 router.put('/UpdatePhoto', protect, UsersCtrl.changeProfilePhoto)
 router.put('/updateData', protect, UsersCtrl.updateData)

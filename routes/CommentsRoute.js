@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const CommentCtrl = require('../controllers/CommentsController')
-const { protect, Admin } = require('../Utils/Authentication')
+const { protect, Admin } = require('../utils/Authentication')
 //Comment on Post
 router.post('/:id', protect, CommentCtrl.addComment)
 //Like Comment

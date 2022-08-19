@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const PostsCtrl = require('../controllers/PostsController')
-const { protect, Admin } = require('../Utils/Authentication')
+const { protect, Admin } = require('../utils/Authentication')
 //post CRUD
 // add post
 router.post('/', protect, PostsCtrl.newPost)
