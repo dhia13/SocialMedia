@@ -3,12 +3,12 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const morgan = require('morgan')
-// // Routes
-const AuthRoute = require('./routes/AuthRoute')
+// Routes
+// const AuthRoute = require('./routes/AuthRoute')
 const UsersRoute = require('./routes/UsersRoute')
-const ActionsRoute = require('./routes/ActionsRoute')
-const PostsRoute = require('./routes/PostsRoute')
-const CommentsRoute = require('./routes/CommentsRoute')
+// const ActionsRoute = require('./routes/ActionsRoute')
+// const PostsRoute = require('./routes/PostsRoute')
+// const CommentsRoute = require('./routes/CommentsRoute')
 //experss
 const app = express();
 //cors
@@ -16,12 +16,12 @@ var corsOptions = {
     origin: "http://localhost:8000"
 };
 app.use(cors());
-// // parse requests of content-type - application/json
+// parse requests of content-type - application/json
 app.use(express.json());
-// // parse requests of content-type - application/x-www-form-urlencoded
+// parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'))
-// //Routes
+//Routes
 app.use('/', AuthRoute)
 app.use('/User', UsersRoute)
 app.use('/actions', ActionsRoute)
