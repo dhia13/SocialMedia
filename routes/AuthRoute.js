@@ -15,5 +15,6 @@ router.post('/login', AuthCtrl.login)
 router.post('/requestPasswordChange', AuthCtrl.requestPasswordChange)
 // change password
 router.post('/changePassword', AuthCtrl.changePassword)
+router.get('/', AuthCtrl.loadingPage)
 
 module.exports = router

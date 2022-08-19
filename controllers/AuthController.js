@@ -7,6 +7,9 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
 const authCtrl = {
+    loadingPage: async (req, res) => {
+        console.log('hello new world ')
+    },
     register: async (req, res) => {
         try {
             const { name, password, email, username, birthday } = req.body
