@@ -1,6 +1,6 @@
 const { User } = require('../models/User')
 const { Profile } = require('../models/Profile')
-const sendMail = require('../Utils/SendEmail')
+const sendMail = require('../utils/SendEmail.js')
 const { CLIENT_URL } = process.env
 const generateToken = require('../Utils/GenrateToken.js')
 const jwt = require('jsonwebtoken')
