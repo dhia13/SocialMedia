@@ -12,7 +12,7 @@ const CommentsRoute = require('./routes/CommentsRoute')
 //experss
 const app = express();
 //cors
-console.log('starting server')
+console.log('starting server ....')
 var corsOptions = {
     origin: "http://localhost:8000"
 };
