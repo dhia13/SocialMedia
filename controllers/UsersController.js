@@ -1,7 +1,7 @@
 const { User } = require('../models/User')
 const { Profile } = require('../models/Profile')
 const jwt = require('jsonwebtoken')
-const sendMail = require('../Utils/SendEmail')
+const sendMail = require('../utils/SendEmail.js')
 const UsersCtrl = {
     getUser: async (req, res) => {
         try {
