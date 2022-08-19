@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const morgan = require('morgan')
 // Routes
-// const AuthRoute = require('./routes/AuthRoute')
+const AuthRoute = require('./routes/AuthRoute')
 // const UsersRoute = require('./routes/UsersRoute')
 // const ActionsRoute = require('./routes/ActionsRoute')
 // const PostsRoute = require('./routes/PostsRoute')
@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'))
 //Routes
-// app.use('/', AuthRoute)
+app.use('/', AuthRoute)
 // app.use('/User', UsersRoute)
 // app.use('/actions', ActionsRoute)
 // app.use('/Posts', PostsRoute)
