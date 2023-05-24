@@ -7,9 +7,6 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
 const authCtrl = {
-    loadingPage: async (req, res) => {
-        console.log('hello new world ')
-    },
     register: async (req, res) => {
         try {
             const { name, password, email, username, birthday } = req.body
@@ -97,7 +94,8 @@ const authCtrl = {
                         _id: user._id,
                         name: user.name,
                         photo: userProfile.photo,
-                        username: userProfile.username
+                        userName: userProfile.userName,
+                        accountType: userProfile.accountType
                     },
                     token: generateToken(user._id, user.isAdmin),
                     success: true

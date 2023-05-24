@@ -74,6 +74,12 @@ const profileSchema = new mongoose.Schema(
         ref: 'Post',
       },
     ],
+    Conversations: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Conversation',
+      },
+    ],
     feed: [
       {
         type: mongoose.Schema.Types.ObjectId,
